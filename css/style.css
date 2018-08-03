@@ -791,12 +791,26 @@ p.copy-right a:hover {
 
 /*-- //footer --*/
 .banner-1{
-    background: url(../images/bg2.jpg) no-repeat center;
+    background: url(../images/BT01.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
 }
 
 .banner-2{
+    background: url(../images/BT02.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+/*-- team --*/
+}
+
+.banner-3{
+    background: url(../images/BT03.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+/*-- team --*/
+}
+
+.banner-4{
     background: url(../images/bg3.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
