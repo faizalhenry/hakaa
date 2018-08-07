@@ -1,4 +1,9 @@
-<?php 
-mysql_connect('localhost','root','db_hka');
-mysql_select_db('db_hka');
-?>
+
+<?php
+$conn = new mysqli ("localhost","root","","hakaa");
+
+// Check connection
+if ($conn->connect_error){
+	die(" Connection failed: " . $conn->connect_error );
+}
+session_start();

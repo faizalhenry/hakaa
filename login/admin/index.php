@@ -1,25 +1,35 @@
 <?php 
 include '../config.php';
- 
-// mengaktifkan session
-session_start();
- 
+
 // cek apakah user telah login, jika belum login maka di alihkan ke halaman login
-if($_SESSION['status'] !="login"){
-	header("location:../index.php");
+
+$username = "";
+$pass = "";
+if ($_POST['username'] != "" && $_POST['password'] != "") { //menerima REQUEST POST dari form login
+	$username = $_POST['username'];
+	$password = $_POST['password']; 
+} else {
+	if($_SESSION['status'] !="login"){
+		header("location:../index.php");
+	}
+	else {
+		header("location:../dashboard/index.php"); // redirect admin lte
+	}
 }
- 
-// menampilkan pesan selamat datang
-echo "Hai, selamat datang ". $_SESSION['username'];
- 
-?>
-<br/>
-<br/>
-<a href="logout.php">LOGOUT</a>
 
+$sql = "SELECT username, password FROM admin WHERE username like '" . $username . "' AND password like '" . $password . "';"; //query cek data ke DB
+$result = $conn->query($sql); //aksi mengirim data ke DB
 
-<?php 
-session_start();
-session_destroy();
-header("location:../index.php");
+if ($result->num_rows > 0) { //cek apakah ada data atau tidak
+	while($row = $result->fetch_assoc()) {
+    	// jika ada, maka kita set session sesuai username yg login, kemudian masuk ke dashboard
+		$_SESSION['status'] = 'login';
+		$_SESSION['username'] = $username;
+		header("location:../dashboard/index.html"); // redirect admin lte 	
+	}
+} else {
+	echo "Username atau password salah!";
+}
+$conn->close();
+
 ?>
