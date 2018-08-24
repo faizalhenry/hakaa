@@ -25,7 +25,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
     	// jika ada, maka kita set session sesuai username yg login, kemudian masuk ke dashboard
 		$_SESSION['status'] = 'login';
 		$_SESSION['username'] = $username;
-		header("location:../dashboard/index.html"); // redirect admin lte 	
+		header("location:../dashboard/index2.html"); // redirect admin lte 	
 	}
 } else {
 	echo "Username atau password salah!";
