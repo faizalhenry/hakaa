@@ -1,5 +1,5 @@
 <?php 
-include '../config.php';
+include '../config.php'; 
 
 // cek apakah user telah login, jika belum login maka di alihkan ke halaman login
 
