@@ -1,14 +1,12 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+﻿<?php 
+include './login/config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<title>HAKAASTON</title>
+	<title> HAKAASTON </title>
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
@@ -42,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<h1>
 						<a class="navbar-brand" href="index.html">
-							<img src="images\hka1.png">
+							<img src="images\hka.jpg">
 						</a>
 					</h1>
 					<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -72,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<a class="nav-link" href="gcg.html">GCG</a>
 						</li>
 						<li class="nav-item mr-3">
-							<a class="nav-link" href="contact.html">Karir</a>
+							<a class="nav-link" href="karir.html">Karir</a>
 						</li>
 						<li class="nav-item mr-3">
 							<a class="nav-link" href="news.php">News</a>
@@ -87,47 +85,57 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 </section>
 <!-- //header -->
-<section class="banner-2">
+<section class="banner-1">
 </section>
-<section class="banner_bottom py-md-5">
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 1. Engineering Assistance </h4>
-		<p class="tit text-center mx-auto"> We recognise that better access to improved infrastructure services is an important engine for economic growth.</p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis1.jpg" class="img-fluid" >
-	</div>
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 2. Hotmix & Paving </h4>
-		<p class="tit text-center mx-auto"> We recognise that better access to improved infrastructure services is an important engine for economic growth.</p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis2.jpg" class="img-fluid" >
-	</div>
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 3. Terminal Aspal </h4>
-		<p class="tit text-center mx-auto"> We recognise that better access to improved infrastructure services is an important engine for economic growth.</p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis3.jpg" class="img-fluid" >
-	</div>
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 4. Precast & Installation </h4>
-		<p class="tit text-center mx-auto"> Spunpile  |  Square Pile  |  CCSP  |  FCSP  |  Facade  | PC-I & PC-U Girder  |  Precast System  </p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis4.jpg" class="img-fluid" >
-	</div>
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 5. Project Based Services </h4>
-		<p class="tit text-center mx-auto"> We recognise that better access to improved infrastructure services is an important engine for economic growth.</p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis4.jpg" class="img-fluid" >
-	</div>
-	<div class="container py-4 mt-2">
-		<h4 class="tittle-w3ls text-center mb-3"> 6. Investment </h4>
-		<p class="tit text-center mx-auto"> We recognise that better access to improved infrastructure services is an important engine for economic growth.</p>
-		<p class="tit text-center mx-auto">_</p>
-		<img src="images\nbis4.jpg" class="img-fluid" >
-	</div>
-</section>
-<!--//ab-->
+<!-- team -->
+<?php //select berita
+if (array_key_exists('id', $_GET)){
+	$id = $_GET['id'];
+}else{
+	$id = '0';
+}
+
+function echo_body($title, $date, $content){
+	echo '<section class="team py-md-5">
+			<div class="container py-4 mt-2">
+				<h3 class="tittle-w3ls text-center mb-3"> 
+					'.$title.' 
+				</h3>
+				<p class="tit text-center mx-auto"> 
+					'.$date.'
+				</p>
+				<div class="row inner-sec-w3layouts-agileinfo pt-4 mt-md-4">
+					<div class="w3-example">
+						<h3> 
+							'.$title.'
+						</h3>
+						<div class="w3-code notranslate htmlHigh">
+							<span style="color:brown">
+								<span style="color:mediumblue">
+									'.$content.'
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>';
+}
+
+$sql = "SELECT title, content, date  FROM news WHERE news_id = " . $id; //query cek data ke DB
+$result = $conn->query($sql);
+if ($result->num_rows > 0) { //cek apakah ada data atau tidak
+	while($row = $result->fetch_assoc()) { // jika ada, maka kita tampilkan semua data
+		echo_body($row['title'], $row['date'], $row['content']);
+	}
+} else {
+	echo_body("Data not Found!", "", "The data you were looking for is not found!");
+}
+?>
+
+
+<!-- //team -->
+
 <!-- distance -->
 <section class="distance-w3 py-md-5">
 	<div class="container py-4 mt-2">
@@ -139,55 +147,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 </section>
 <!-- //distance -->
-<!-- team -->
-<section class="team py-md-5">
-	<div class="container py-4 mt-2">
-		<h3 class="tittle-w3ls text-center mb-3"> Unit Produksi </h3>
-		<p class="tit text-center mx-auto"> Unit Produksi kami yang tersebar di beberapa wilayah nusantara </p>
-		<div class="row inner-sec-w3layouts-agileinfo pt-4 mt-md-4">
-			<div class="col-md-3 col-sm-6 team-grids">
-				<img src="images/t1.jpg" class="img-fluid" alt="">
-				<div class="team-info">
-					<div class="caption">
-						<h4>Geosynthetics </h4>
-						<h6><a href="detail-geo.php"> Proses Pemancangan PVD </a></h6>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 team-grids">
-				<img src="images/t2.jpg" class="img-fluid" alt="">
-				<div class="team-info">
-					<div class="caption">
-						<h4> Aphalt Mixing Plant </h4>
-						<h6> Proses Penghamparan </h6>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 team-grids">
-				<img src="images/t3.jpg" class="img-fluid" alt="">
-				<div class="team-info">
-					<div class="caption">
-						<h4> Pabrik Precast Bojonegara </h4>
-						<h6> Area Produksi Precast</h6>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6 team-grids">
-				<img src="images/t4.jpg" class="img-fluid" alt="">
-				<div class="team-info">
-					<div class="caption">
-						<h4> UP Palindra </h4>
-						<h6> Jalan Tol Trans Sumatera Ruas Palembang-Indralaya </h6>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- //team -->
-
-
 <!-- footer -->
 <footer>
 	<section class="footer py-md-5">
@@ -223,13 +182,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-2 sign-gd">
 					<h4>Useful Links</h4>
 					<ul>
-						<li><a href="about.html">About</a></li>
-						<li><a href="bisnis.html">Bisnis</a></li>
-						<li><a href="proyek.html">Proyek</a></li>
-						<li><a href="csr.html">CSR</a></li>
-						<li><a href="gcg.html">GCG</a></li>
-						<li><a href="karir.html">Karir</a></li>
-						<li><a href="news.php">Berita</a></li>
+						<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="bisnis.html">Bisnis</a></li>
+							<li><a href="proyek.html">Proyek</a></li>
+							<li><a href="csr.html">CSR</a></li>
+							<li><a href="gcg.html">GCG</a></li>
+							<li><a href="karir.html">Karir</a></li>
+							<li><a href="news.php">Berita</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 sign-gd-two">
@@ -276,30 +236,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<p class="copy-right py-3"> HAKAASTON 2018 All rights reserved | Design by HAKAASTON<a href="http://w3layouts.com/">W3layouts</a></p>
 	<!-- //footer -->
 </footer>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title">Shipping</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="agileits-w3layouts-info">
-					<img src="images/g1.jpg" class="img-fluid" alt="" />
-					<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. </p>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- //Modal -->
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <!-- //js-->
