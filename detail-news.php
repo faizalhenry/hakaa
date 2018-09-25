@@ -73,7 +73,7 @@ include './login/config.php';
 							<a class="nav-link" href="karir.html">Karir</a>
 						</li>
 						<li class="nav-item mr-3">
-							<a class="nav-link" href="news.html">News</a>
+							<a class="nav-link" href="news.php">News</a>
 						</li>
 					</ul>
 				</div>
@@ -141,7 +141,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 	<div class="container py-4 mt-2">
 		<div class="row">
 			<div class="col-md-8 distance-agile-left">
-				<h4 class="mt-2">BuildTheFutureWithUs</h4>
+				<h4 class="mt-2">#BuildTheFutureWithUs</h4>
 			</div>
 		</div>
 	</div>
@@ -183,10 +183,13 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 					<h4>Useful Links</h4>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="bisnis.html">Bisnis</a></li>
+							<li><a href="proyek.html">Proyek</a></li>
+							<li><a href="csr.html">CSR</a></li>
+							<li><a href="gcg.html">GCG</a></li>
+							<li><a href="karir.html">Karir</a></li>
+							<li><a href="news.php">Berita</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 sign-gd-two">

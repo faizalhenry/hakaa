@@ -56,7 +56,8 @@ include './login/config.php';
 						</a>
 					</li>
 					<li class="nav-item mr-3">
-						<a class="nav-link" href="about.html"> About</a>	<li class="nav-item mr-3">
+						<a class="nav-link" href="about.html"> About</a>
+						<li class="nav-item mr-3">
 							<a class="nav-link" href="bisnis.html">Bisnis</a>
 						</li>
 						<li class="nav-item mr-3">
@@ -72,7 +73,7 @@ include './login/config.php';
 							<a class="nav-link" href="karir.html">Karir</a>
 						</li>
 						<li class="nav-item mr-3">
-							<a class="nav-link" href="news.html">News</a>
+							<a class="nav-link" href="news.php">News</a>
 						</li>
 					</ul>
 				</div>
@@ -87,39 +88,52 @@ include './login/config.php';
 <section class="banner-1">
 </section>
 <!-- team -->
-<section class="team py-md-5">
-	<div class="container py-4 mt-2">
-		<h3 class="tittle-w3ls text-center mb-3"> News </h3>
-		<p class="tit text-center mx-auto"> News Update  </p>
-		<div class="row inner-sec-w3layouts-agileinfo pt-4 mt-md-4">
-
 <?php //select berita
-$sql = "SELECT news_id, title, summary  FROM news "; //query cek data ke DB
+if (array_key_exists('id', $_GET)){
+	$id = $_GET['id'];
+}else{
+	$id = '0';
+}
+
+function echo_body($title, $date, $content){
+	echo '<section class="team py-md-5">
+			<div class="container py-4 mt-2">
+				<h3 class="tittle-w3ls text-center mb-3"> 
+					'.$title.' 
+				</h3>
+				<p class="tit text-center mx-auto"> 
+					'.$date.'
+				</p>
+				<div class="row inner-sec-w3layouts-agileinfo pt-4 mt-md-4">
+					<div class="w3-example">
+						<h3> 
+							'.$title.'
+						</h3>
+						<div class="w3-code notranslate htmlHigh">
+							<span style="color:brown">
+								<span style="color:mediumblue">
+									'.$content.'
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>';
+}
+
+$sql = "SELECT title, content, date  FROM news WHERE news_id = " . $id; //query cek data ke DB
 $result = $conn->query($sql);
 if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 	while($row = $result->fetch_assoc()) { // jika ada, maka kita tampilkan semua data
-		?>
-		<div class="w3-example">
-			<h3> <?=$row['title'] //memanggil field judul ?> </h3>
-			<div class="w3-code notranslate htmlHigh">
-				<span style="color:brown">
-					<span style="color:mediumblue">
-						<?=$row['summary']?>
-					</span>
-				</span>
-			</div>
-			<a class="w3-btn w3-margin-bottom" href="./detail-news.php?id=<?=$row['news_id']?>" target="_blank">Baca selengkapnya</a>
-		</div>
-
-	<?php
-}
+		echo_body($row['title'], $row['date'], $row['content']);
+	}
 } else {
-	echo "Data tidak ada!";
+	echo_body("Data not Found!", "", "The data you were looking for is not found!");
 }
 ?>
 
-</div>
-</section>
+
 <!-- //team -->
 
 <!-- distance -->
@@ -168,7 +182,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 				<div class="col-md-2 sign-gd">
 					<h4>Useful Links</h4>
 					<ul>
-							<li><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="bisnis.html">Bisnis</a></li>
 							<li><a href="proyek.html">Proyek</a></li>
