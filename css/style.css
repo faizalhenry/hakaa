@@ -137,7 +137,7 @@ li.nav-item {
 	font-weight: 600;
 }
 .dropdown-item:hover, .dropdown-item:focus {
-    color: #ffdc39;
+    color: #FFC000;
     text-decoration: none;
     background-color: transparent;
 }
@@ -195,6 +195,14 @@ li.nav-item {
 }
 
 .banner-top6 {
+    background: url(../images/bg6.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+.banner-top7 {
     background: url(../images/bg6.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
@@ -303,7 +311,7 @@ label.header span {
     padding: 0.5em 0;
     letter-spacing: 1px;
     border: none;
-    background: #ffdc39;
+    background: #FFC000;
     margin-top: 20px;
 }
 
@@ -336,7 +344,7 @@ label.header span {
 
 .banner-btmg1 h3 {
     font-size: 28px;
-    color: #ffdc39;
+    color: #FFC000;
     font-weight: 500;
 }
 .banner-subg1 h3, .about-bottom h5 {
@@ -392,8 +400,8 @@ label.header span {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: capitalize;
-    background: #ffdc39;
-    border: 2px solid #ffdc39;
+    background: #FFC000;
+    border: 2px solid #FFC000;
     transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
     -moz-transition: .5s ease-in;
@@ -440,7 +448,7 @@ h3.tittle-w3ls {
     font-size: 0.8em;
     letter-spacing: 1px;
     background: #ffffff;
-    border: 2px solid #ffdc39;
+    border: 2px solid #FFC000;
     border-radius: 0;
     font-weight: 600;
     text-transform: uppercase;
@@ -451,8 +459,8 @@ h3.tittle-w3ls {
     -ms-transition: 0.5s all;
 }
 .ab_button a:hover {
-    background: #ffdc39;
-    border: 2px solid #ffdc39;
+    background: #FFC000;
+    border: 2px solid #FFC000;
 }
 /*-- testimonials --*/
 /*-- cards --*/
@@ -461,7 +469,7 @@ h5.card-title {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 1em;
-    color:#ffdc39 ;
+    color:#FFC000 ;
 }
 p.card-text {
     color: #777;
@@ -477,7 +485,7 @@ p.card-text {
     border-radius: 0 0 5px 5px;
 }
 a.blog-btn {
-    background: #ffdc39 ;
+    background: #FFC000 ;
     font-size: 15px;
     padding: 0.5em 1.5em;
     color: #000;
@@ -562,12 +570,12 @@ section.slider {
     display: inline-block;
     font-size: .8em;
     font-weight: bold;
-    color: #ffdc39;
+    color: #FFC000;
     padding-left: 20px;
 }
 /*-- //testimonials --*/
 .distance-w3 {
-    background: #ffdc39;
+    background: #FFC000;
 }
 .distance-w3 h4 {
     font-size: 28px;
@@ -595,7 +603,7 @@ section.slider {
     font-size: 3.5em;
     font-weight: 700;
     letter-spacing: 2px;
-    color:#ffdc39;
+    color:#FFC000;
     margin: 0 0 0.2em 0;
 }
 .w3layouts_stats_left h3 {
@@ -709,7 +717,7 @@ ul.social-nav.model-3d-0.footer-social.social.two {
 }
 
 .address-right p a {
-    color: #ffdc39;
+    color: #FFC000;
     text-decoration: none;
 }
 
@@ -765,7 +773,7 @@ p.copy-right {
     background: #080808;
 }
 p.copy-right a {
-    color: #ffdc39;
+    color: #FFC000;
     text-decoration: none;
 }
 
@@ -789,7 +797,7 @@ p.copy-right a:hover {
     font-weight: 500;
 }
 
-/*-- //footer --*/
+
 .banner-1{
     background: url(../images/BT01.jpg) no-repeat center;
     background-size: cover;
@@ -800,20 +808,61 @@ p.copy-right a:hover {
     background: url(../images/BT02.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
-/*-- team --*/
+
 }
 
 .banner-3{
     background: url(../images/BT03.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
-/*-- team --*/
+
 }
 
 .banner-4{
     background: url(../images/bg3.jpg) no-repeat center;
     background-size: cover;
     min-height: 300px;
+    
+}
+.banner-5{
+    background: url(../images/bg3.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+
+}
+.banner-6{
+    background: url(../images/bg3.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+
+}
+.banner-7{
+    background: url(../images/bg3.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+}
+.banner-8{
+    background: url(../images/BT04.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+}
+.banner-9{
+    background: url(../images/BT05.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+}
+.banner-10{
+    background: url(../images/BT06.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+}
+.banner-11{
+    background: url(../images/BT07.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+
+}
+}
 /*-- team --*/
 }
 
@@ -837,7 +886,7 @@ p.copy-right a:hover {
 .team-grids h6{
     font-size: 0.9em;
     font-weight: 400;
-    color: #ffdc39;
+    color: #FFC000;
     letter-spacing: 1px;
     margin: 1em 0;
 }
@@ -863,7 +912,7 @@ p.copy-right a:hover {
     margin: 0;
     left: 15px;
     background: rgb(17, 18, 19);
-    border-top:4px solid #ffdc39;
+    border-top:4px solid #FFC000;
     padding: 1em;
     -webkit-transition: .5s all;
     transition: .5s all;
@@ -968,7 +1017,7 @@ p.copy-right a:hover {
 }
 
 .p-mask h4 {
-	color: #ffdc39;
+	color: #FFC000;
 	font-size: 1.2em;
 	text-decoration: none;
 	line-height: 1.8em;
@@ -1076,7 +1125,7 @@ li.list-group-item1 {
 }
 .grid_5 h3, .grid_5 h2, .grid_5 h1, .grid_5 h4, .grid_5 h5, h3.hdg, h3.bars {
     margin-bottom: 1em;
-    color:#ffdc39;
+    color:#FFC000;
     font-weight: 700;
     font-size: 30px;
     letter-spacing: 2px;
@@ -1333,7 +1382,7 @@ h5.card-title {
 .distance-w3 h4 {
     font-size: 25px;
 }
-.banner-1 {
+.banner-1 { 
     min-height: 250px;
 }
 }
@@ -1368,11 +1417,11 @@ li.nav-item {
     margin: 10px 0px;
 }
 li.nav-item {
-    color: #fff;
+    color: #f4d442;
 }
 .navbar-light .navbar-toggler {
-    border-color:#ffdc39 ;
-    background:#ffdc39 ;
+    border-color:#FFC000 ;
+    background:#FFC000 ;
     padding: 2px 6px;
     margin-top: 5px;
     outline: none;
@@ -1387,7 +1436,7 @@ li.nav-item {
     -ms-transition: 0.5s all;
 }
 .navbar-light .navbar-toggler:hover {
-    background:#ffdc39 ;
+    background:#FFC000 ;
 }
 .dropdown-menu.show {
     text-align: center;
@@ -1410,7 +1459,7 @@ li.nav-item {
     background-color: #000000;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #fff;
+    color: #f4d442;
 }
 .banner-info h3 {
     font-size: 46px;
@@ -1626,13 +1675,115 @@ h3.tittle-w3ls {
     width: auto;
     background-color: #fff;
     padding: 8px 12px;
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid #fde84b;
     word-wrap: break-word;
 }
 .w3-code, .w3-codespan {
-    font-family: Consolas,"courier new";
-    font-size: 16px;
+    font-size: 18px;
 }
 
+/* HALAMAN PROYEK - Halaman Proyek ada disini */
+#rig {
+    max-width:900px;
+    margin:0 auto; /*center aligned*/
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    background-color:#000;
+}
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
 
-/* -- //Responsive code -- */
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #3DC0F1 url(img/link.png) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:normal!important;
+    top:40%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
+    }
+}
+

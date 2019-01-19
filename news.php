@@ -2,11 +2,17 @@
 include './login/config.php';
 ?>
 
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<title> HAKAASTON </title>
+	<title>HAKAASTON</title>
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
@@ -40,7 +46,7 @@ include './login/config.php';
 
 					<h1>
 						<a class="navbar-brand" href="index.html">
-							<img src="images\hka.jpg">
+							<img src="images\hka1.png">
 						</a>
 					</h1>
 					<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -56,7 +62,8 @@ include './login/config.php';
 						</a>
 					</li>
 					<li class="nav-item mr-3">
-						<a class="nav-link" href="about.html"> About</a>	<li class="nav-item mr-3">
+						<a class="nav-link" href="about.html"> About</a>
+						<li class="nav-item mr-3">
 							<a class="nav-link" href="bisnis.html">Bisnis</a>
 						</li>
 						<li class="nav-item mr-3">
@@ -72,20 +79,19 @@ include './login/config.php';
 							<a class="nav-link" href="karir.html">Karir</a>
 						</li>
 						<li class="nav-item mr-3">
-							<a class="nav-link" href="news.html">News</a>
+							<a class="nav-link" href="news.php">News</a>
 						</li>
 					</ul>
 				</div>
 
 			</nav>
 		</header>
-		<!-- //header -->
 
 	</div>
 </section>
 <!-- //header -->
-<section class="banner-1">
-</section>
+  <section class="banner-11">
+  </section>
 <!-- team -->
 <section class="team py-md-5">
 	<div class="container py-4 mt-2">
@@ -102,8 +108,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 		<div class="w3-example">
 			<h3> <?=$row['title'] //memanggil field judul ?> </h3>
 			<div class="w3-code notranslate htmlHigh">
-				<span style="color:brown">
-					<span style="color:mediumblue">
+					<span style="color:black">
 						<?=$row['summary']?>
 					</span>
 				</span>
@@ -127,7 +132,6 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 	<div class="container py-4 mt-2">
 		<div class="row">
 			<div class="col-md-8 distance-agile-left">
-				<h4 class="mt-2">#BuildTheFutureWithUs</h4>
 			</div>
 		</div>
 	</div>
@@ -153,7 +157,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.instagram.com/pthakaaston">
 								<i class="fab fa-instagram" aria-hidden="true"></i>
 							</a>
 						</li>
@@ -219,7 +223,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 			</div>
 		</div>
 	</section>
-	<p class="copy-right py-3"> HAKAASTON 2018 All rights reserved | Design by HAKAASTON<a href="http://w3layouts.com/">W3layouts</a></p>
+	<p class="copy-right py-3"> HAKAASTON 2018 All rights reserved | Design by HAKAASTON</p>
 	<!-- //footer -->
 </footer>
 <!-- js -->

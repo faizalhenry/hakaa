@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 include './login/config.php';
 ?>
 
@@ -40,14 +40,14 @@ include './login/config.php';
 
 					<h1>
 						<a class="navbar-brand" href="index.html">
-							<img src="images\hka.jpg">
+							<img src="images\hka1.png">
 						</a>
 					</h1>
 					<button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
+     
 
 				<ul class="navbar-nav ml-lg-auto text-center">
 					<li class="nav-item mr-3">
@@ -111,7 +111,7 @@ function echo_body($title, $date, $content){
 						</h3>
 						<div class="w3-code notranslate htmlHigh">
 							<span style="color:brown">
-								<span style="color:mediumblue">
+								<span style="color:black">
 									'.$content.'
 								</span>
 							</span>
@@ -167,7 +167,7 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.instagram.com/pthakaaston">
 								<i class="fab fa-instagram" aria-hidden="true"></i>
 							</a>
 						</li>
@@ -245,7 +245,9 @@ if ($result->num_rows > 0) { //cek apakah ada data atau tidak
 <script> 
 	jQuery(document).ready(function ($) {
 		$(".scroll").click(function (event) {
-			event.preventDefault();
+			event.preventDefault();  
+
+			
 
 			$('html,body').animate({
 				scrollTop: $(this.hash).offset().top
