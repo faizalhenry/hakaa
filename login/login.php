@@ -1,5 +1,9 @@
 /<?php 
+<<<<<<< HEAD
 include '../config.php';
+=======
+include 'config.php';
+>>>>>>> 553fae46cb9ade79ea1b3de12638a06205d852ec
  
 $username = $_POST['username'];
 $password = md5($_POST['password']);
